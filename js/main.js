@@ -8,5 +8,5 @@ selectFileBtn.addEventListener("click", () => fileSelector.click());
 fileSelector.addEventListener("change", async function () {
   let zip = this.files[0];
   await registerApp(zip, serviceWorkerPath, cacheName);
-  page.reload();
+  window.location.reload();
 });
